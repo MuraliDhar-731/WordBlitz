@@ -9,7 +9,7 @@ if 'start_time' not in st.session_state:
     st.session_state.start_time = None
 
 if st.button("Start New Game"):
-    res = requests.get("http://localhost:8000/start_game").json()
+    res = requests.get("http://127.0.0.1:8000/start_game").json()
     st.session_state.true_word = res['true_word']
     st.session_state.masked = res['word']
     st.session_state.length = res['length']
